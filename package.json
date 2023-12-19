@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "test.js",
+  "engines": {
+    "node": "18.18.0"
+  },
   "scripts": {
     "start": "node index.js",
     "build": "npm run migrate && npm run seed",

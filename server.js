@@ -15,7 +15,7 @@ const setupServer = () => {
   app.use(cors());
 
   app.get('/', (req, res) => {
-    res.send('Hello-Node');
+    res.send('Hello-NodeJS!!!!!!!!!');
   });
 
   //"/api/v1"に飛んできたらapiRoutesファイルに飛んでいく

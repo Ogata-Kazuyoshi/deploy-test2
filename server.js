@@ -1,7 +1,7 @@
-const express = require("express");
+const express = require('express');
 //routesフォルダのindex.jsファイルを呼び出し
-const apiRoutes = require("./routes");
-const cors = require("cors");
+const apiRoutes = require('./routes');
+const cors = require('cors');
 
 const setupServer = () => {
   //expressをインスタンス化
@@ -14,8 +14,12 @@ const setupServer = () => {
   //全てのHttpリクエストに対してcorsを許可する
   app.use(cors());
 
+  app.get('/', (req, res) => {
+    res.send('Hello-Node');
+  });
+
   //"/api/v1"に飛んできたらapiRoutesファイルに飛んでいく
-  app.use("/api/v1", apiRoutes);
+  app.use('/api/v1', apiRoutes);
   return app;
 };
 module.exports = { setupServer };
